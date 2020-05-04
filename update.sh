@@ -1,3 +1,3 @@
 git add -A
-git commit -m "update.0504"
+git commit -m $1
 git push origin master
