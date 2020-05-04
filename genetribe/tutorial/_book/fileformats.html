@@ -1,0 +1,426 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4 File Formats · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="coreworkflow.html" />
+    
+    
+    <link rel="prev" href="quickstart.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1 What is GeneTribe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    2 Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="quickstart.html">
+            
+                <a href="quickstart.html">
+            
+                    
+                    3 Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="fileformats.html">
+            
+                <a href="fileformats.html">
+            
+                    
+                    4 File Formats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="coreworkflow.html">
+            
+                <a href="coreworkflow.html">
+            
+                    
+                    5 Core Workflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    6 Other Ultilities
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >4 File Formats</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="4-file-formats">4 File formats</h1>
+<p>Here we have described in detail the acquisition method and formats of the input files and the output files.</p>
+<h2 id="41-files-of-core">4.1 Files of core</h2>
+<p>The core workflow of genetribe</p>
+<h2 id="input-files">Input files</h2>
+<h3 id="file1-protein-sequences-in-fasta-format">File1 Protein sequences in fasta format</h3>
+<ol>
+<li>One of input files of <strong>genetribe</strong> is <a href="https://en.wikipedia.org/wiki/FASTA_format" target="_blank">fasta</a> format file that stores protein sequences.
+You can obtain the fasta file from <a href="https://www.ensembl.org/" target="_blank">Emselbl</a> or <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a>.
+Their file name is generally <code>name.pep.all.fa.gz</code>.</li>
+<li>We decompress them all using the command <code>gunzip name.pep.all.fa.gz</code>, and rename it as <code>name.fa</code>, <strong>genetribe</strong>  extracts longest transcript per gene as the representative sequences.</li>
+<li>Repeat the above steps for another genome.
+<br><strong>example:</strong><pre><code class="lang-sh">&gt;AT2G27490.4 pep chromosome:TAIR10:2:11748087:11749153:-1 gene:AT2G27490 transcript:AT2G27490.4 gene_biotype:protein_coding
+MRIVGLTGGIASGKSTVSNLFKASGIPVVDADVVARDVLKKGSGGWKRVVAAFGEEILLP
+SGEVDRPKLGQIVFSSDSKRQLLNKLMAPYISSGIFWEILKQWASGAKVIVVDIPLLFEV
+KMDKWTKPIVVVWVSQETQLKRLMERDGLSEEDARNRVMAQMPLDSKRSKADVVIDNNGS
+LDDLHQQFEKVLIEIRRPLTWIEFWRSRQGAFSVLGSVILGLSVCKQLKIGS
+</code></pre>
+Note:<br>In this example. <strong>genetribe</strong> uses lines where the greater-than &quot;&gt;&quot; is to distinguish sequences and extract longest transcript per gene. genetribe uses the ID that starts with <code>gene:</code> to get ID &quot;AT2G27490&quot;. If this ID does not exist, genetribe uses the ID splited by separator <code>.</code>. The separator is used to distinguish gene ID from transcript ID and specified by parameters <code>-s</code> in <code>genetribe core</code>.</li>
+</ol>
+<h3 id="file2-annotation-file-in-bed-format">File2 Annotation file in bed format</h3>
+<ol>
+<li>One of input files of <strong>genetribe</strong> is <a href="https://en.wikipedia.org/wiki/BED_(file_format" target="_blank">bed</a>) format file that stores annotation information. First, you can obtain the <a href="https://en.wikipedia.org/wiki/General_feature_format" target="_blank">gff</a> file from <a href="https://www.ensembl.org/" target="_blank">Emselbl</a> or <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a>. Their file name is generally <code>name.gff3.gz</code>.</li>
+<li>We decompress them all using the command <code>gunzip name.gff3.gz</code>, and rename it as <code>name.gff3</code>.</li>
+<li>We convert <code>gff</code> file to <code>bed</code> file that only contains gene line. there are two ways to choose(of course, there are more ways):<br>
+MCscan + sed:<pre><code class="lang-sh">python -m jcvi.formats.gff bed --type=gene --key=ID name.gff3 -o name.bed
+sed -i <span class="hljs-string">&apos;s/gene://g&apos;</span> name.bed
+</code></pre>
+gff2bed + gawk + sed:<pre><code class="lang-sh">gff2bed &lt; name.gff3 | gawk -vOFS=<span class="hljs-string">&quot;\t&quot;</span> <span class="hljs-string">&apos;{if($8==&quot;gene&quot;)print $1,$2,$3,$4,$5,$6}&apos;</span> | sed <span class="hljs-string">&apos;s/gene://g&apos;</span> &gt; name.bed
+</code></pre>
+<strong>example:</strong><pre><code class="lang-sh">1       3630    5899    AT1G01010       0       +
+1       6787    9130    AT1G01020       0       -
+1       11648   13714   AT1G01030       0       -
+1       23120   31227   AT1G01040       0       +
+1       31169   33171   AT1G01050       0       -
+1       33364   37871   AT1G01060       0       -
+1       38443   41017   AT1G01070       0       -
+1       44969   47059   AT1G01080       0       -
+1       47233   49304   AT1G01090       0       -
+</code></pre>
+Each column is chromosome, chromosome start, chromosome end, name of gene, score and strand.<br>Note:<br>For some annotations, the fourth column of <code>bed</code> contains some strings, such as <code>gene:</code>, <code>ID:</code>, etc., we should delete.<h3 id="file3-chromosome-group-information">File3 Chromosome Group information</h3>
+In this part, we should specify the chromosome name characteristics of each subgenome of the species genome, and name it <code>name.chrlist</code>.
+<br><strong>example:</strong><br>
+Triticum aestivum IWGSC RefSeqv1:<pre><code class="lang-sh">cat Triticum_aestivum.chrlist
+chrNA,chrNB,chrND
+</code></pre>
+Triticum urartu Tu2.0:<pre><code class="lang-sh">cat Triticum_urartu.chrlist
+TuN
+</code></pre>
+Oryza sativa Japonica IRGSP v1<pre><code class="lang-sh">cat Oryza_sativa_Japonica.chrlist
+N
+</code></pre>
+Note:<br>
+The chromosome name in <code>.chrlist</code> must be the same as in chromosome name in the <code>bed</code>.</li>
+</ol>
+<h3 id="file4-gene-annotation-confidence-optional">File4 Gene annotation confidence (Optional)</h3>
+<p>This file is only needed when we specified parameters <code>-c</code> in <code>genetribe core</code>.</p>
+<ol>
+<li>The confidence ( HC / high confidence, LC / low confidence ) can be found in <code>gff</code> or name <code>fasta</code> ( <code>name.HC.fasta</code>,<code>name.LC.fasta</code>) downloaded from the database.</li>
+<li>Extract two columns of information, gene ID and confidence, and name it <code>name.confidence</code>.
+<br><strong>example:</strong><br><pre><code class="lang-sh">TraesCS1A02G000100      HC
+TraesCS1A02G000200      HC
+TraesCS1A02G000300      HC
+TraesCS1A02G000100LC    LC
+TraesCS1A02G000200LC    LC
+TraesCS1A02G000300LC    LC
+</code></pre>
+</li>
+</ol>
+<h2 id="output-files">Output files</h2>
+<center>Table 1 Output files of the core workflow</center>
+
+<table>
+<thead>
+<tr>
+<th>Output files</th>
+<th>Contents  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.one2many</td>
+<td>It can also be called the <code>.many2many</code> file, which contains all homologous gene pairs, there are three columns of information, namely the gene in genome 1, the gene in genome 2 and the match score</td>
+</tr>
+<tr>
+<td>.one2one</td>
+<td>The RBH+SBH, which contains four columns of information, namely the gene in genome 1, the gene in genome2, the homologous type (RBH/SBH) and the chromosome group of gene in genome 2</td>
+</tr>
+<tr>
+<td>.RBH</td>
+<td>The gene pairs belonging to the Reciprocal Best Hits</td>
+</tr>
+<tr>
+<td>.SBH</td>
+<td>The genes pairs belonging to the Single-side Best Hits, where RBH is not found but the best matching gene is found</td>
+</tr>
+<tr>
+<td>.singleton</td>
+<td>The genes with no homologous genes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="42-files-of-sameassembly">4.2 Files of sameassembly</h2>
+<p>The Homolog inference for same assembly</p>
+<h2 id="input-files">Input files</h2>
+<h3 id="file1-annotation-file-in-bed-format">File1 Annotation file in bed format</h3>
+<p>The file is the same as bed in <code>core</code>.</p>
+<h3 id="file2-length-of-genes">File2 Length of genes</h3>
+<p>We can obtain it from <code>bed</code> using the following command (of course, there are more ways):</p>
+<pre><code class="lang-sh">cat name.bed | gawk -vOFS=<span class="hljs-string">&quot;\t&quot;</span> <span class="hljs-string">&apos;{print $4,$3-$2}&apos;</span> &gt; name.genelength
+</code></pre>
+<h2 id="output-files">Output files</h2>
+<center>Table 2 Output files of the genereibe sameassembly</center>
+
+<table>
+<thead>
+<tr>
+<th>Output files</th>
+<th>Contents  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.one2many</td>
+<td>It can also be called the <code>.many2many</code> file, which contains all gene pairs with overlapping positions, there are three columns of information, namely the gene in genome 1, the gene in genome 2 and the match score</td>
+</tr>
+<tr>
+<td>.one2one</td>
+<td>The RBH+SBH, which contains three columns of information, namely the gene in genome 1, the gene in genome2 and the homologous type (RBH/SBH)</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="quickstart.html" class="navigation navigation-prev " aria-label="Previous page: 3 Quick Start">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="coreworkflow.html" class="navigation navigation-next " aria-label="Next page: 5 Core Workflow">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4 File Formats","level":"1.4","depth":1,"next":{"title":"5 Core Workflow","level":"1.5","depth":1,"path":"coreworkflow.md","ref":"coreworkflow.md","articles":[]},"previous":{"title":"3 Quick Start","level":"1.3","depth":1,"path":"quickstart.md","ref":"quickstart.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fileformats.md","mtime":"2020-05-04T17:37:50.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T18:00:12.533Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

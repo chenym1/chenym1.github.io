@@ -1,0 +1,386 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5 Core Workflow · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="fileformats.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1 What is GeneTribe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    2 Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="quickstart.html">
+            
+                <a href="quickstart.html">
+            
+                    
+                    3 Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="fileformats.html">
+            
+                <a href="fileformats.html">
+            
+                    
+                    4 File Formats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="coreworkflow.html">
+            
+                <a href="coreworkflow.html">
+            
+                    
+                    5 Core Workflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    6 Other Ultilities
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >5 Core Workflow</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="5-core-workflow">5 Core Workflow</h1>
+<p>The core workflow of genetribe, multiple-level homolog-identification pipeline, takes advantages of collinearity block scores and chromosome group information.</p>
+<h2 id="command">command</h2>
+<pre><code class="lang-sh"><span class="hljs-comment">#  genetribe core -h</span>
+<span class="hljs-comment">#  Usage:</span>
+<span class="hljs-comment">#  genetribe core -l &lt;FirstName&gt; -f &lt;SecondName&gt; [options]</span>
+<span class="hljs-comment">#      </span>
+<span class="hljs-comment">#  Description:</span>
+<span class="hljs-comment">#    The core workflow of genetribe</span>
+<span class="hljs-comment">#    Author:Chen,Yongming; 2020-5-2; chen_yongming@126.com</span>
+<span class="hljs-comment">#      </span>
+<span class="hljs-comment">#  Options:</span>
+<span class="hljs-comment">#    -h         Show this message and exit</span>
+<span class="hljs-comment">#    -l &lt;str&gt;   Prefix name of first file</span>
+<span class="hljs-comment">#    -f &lt;str&gt;   Prefix name of second file</span>
+<span class="hljs-comment">#    -d &lt;dir&gt;   Pre-computed BLAST file in &lt;dir&gt; [default ./]</span>
+<span class="hljs-comment">#    -r         Calculate chromosome group score [default True]</span>
+<span class="hljs-comment">#    -c         Calculate confidence score [default False]</span>
+<span class="hljs-comment">#    -s &lt;str&gt;   The separator between gene name and number in the header of fasta [default .]</span>
+<span class="hljs-comment">#    -e         E-value of BLASTP [default 1e-5]</span>
+<span class="hljs-comment">#    -n &lt;int&gt;   Number of threads [default 1]</span>
+<span class="hljs-comment">#    -b &lt;float&gt; Threshold based on BSR for filtering Match Score(0-100) [default 75]</span>
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<center>Table 3 General parameters in genetribe core</center>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h</td>
+<td>Print brief help message</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-l</td>
+<td>The prefix names of the files for genome 1, such as prefix_name.bed, prefix_name.fa, prefix_name.chrlist and prefix_name.confidence</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>The prefix names of the files for genome 2, such as prefix_name.bed, prefix_name.fa, prefix_name.chrlist and prefix_name.confidence</td>
+<td></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>If you have any of the pre-computed files name1_name2.blast, name2_name1.blast, name1_name1.blast and name2_name2.blast, put it in directory &quot;dir&quot;, add the parameter &quot;-d dir&quot; to genetribe core, the program will skip BLAST step</td>
+<td>./</td>
+<td></td>
+</tr>
+<tr>
+<td>-r</td>
+<td>Whether to add penalty ratio to the match score according to different subgenome group number</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td>-c</td>
+<td>Whether to add penalty ratio to the match score according to gene annotation confidence</td>
+<td>False</td>
+<td></td>
+</tr>
+<tr>
+<td>-s</td>
+<td>The separator is used to distinguish gene ID from transcript ID (for more detail, see File formats)</td>
+<td>.</td>
+<td></td>
+</tr>
+<tr>
+<td>-e</td>
+<td>The e-value in BLASTP. In general, the lower the threshold, the fewer results you get</td>
+<td>1e-5</td>
+<td></td>
+</tr>
+<tr>
+<td>-n</td>
+<td>Number of threads. BLASTP will be calculated in parallel, so the number of threads will be divided equally</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>-b</td>
+<td>Filtering threshold. The final filtering threshold is &apos;BSR &#xD7; Filtering threshold &#xD7; &#x3B1;&apos;</td>
+<td>75</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="fileformats.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4 File Formats">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5 Core Workflow","level":"1.5","depth":1,"next":{"title":"6 Other Ultilities","level":"1.6","depth":1,"ref":"","articles":[]},"previous":{"title":"4 File Formats","level":"1.4","depth":1,"path":"fileformats.md","ref":"fileformats.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"coreworkflow.md","mtime":"2020-05-04T18:00:07.666Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T18:00:12.533Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
