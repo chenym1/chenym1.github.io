@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6 Other Ultilities · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="homoinfer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://chenym1.github.io/genetribe/" target="_blank" class="custom-link">Back Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1 What is GeneTribe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    2 Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="quickstart.html">
+            
+                <a href="quickstart.html">
+            
+                    
+                    3 Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="fileformats.html">
+            
+                <a href="fileformats.html">
+            
+                    
+                    4 File Formats
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="homoinfer.html">
+            
+                <a href="homoinfer.html">
+            
+                    
+                    5 Homologues Inference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    6 Other Ultilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >6 Other Ultilities</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="6-other-ultilities">6 Other Ultilities</h1>
+<h2 id="61-rbh">6.1 RBH</h2>
+<p>The gene pairs belonging to the <strong>Reciprocal Best Hits (RBH)</strong> generally has higher accuracy, Here we have integrated a convenient and fast tool to identify RBH. The user only needs to input two files containing three columns of data.
+<br><strong>command</strong></p>
+<pre><code class="lang-sh">genetribe RBH -h
+
+<span class="hljs-comment">#  Usage: RBH -a input1 -b input2 &gt; output</span>
+<span class="hljs-comment">#  Description: Obtain Reciprocal Best Hits (RBH)</span>
+<span class="hljs-comment">#  </span>
+<span class="hljs-comment">#  Exmaple:</span>
+<span class="hljs-comment">#   Input1:</span>
+<span class="hljs-comment">#      A1    B1    100</span>
+<span class="hljs-comment">#      A1    B2    200</span>
+<span class="hljs-comment">#   Input2</span>
+<span class="hljs-comment">#      B1    A1    200</span>
+<span class="hljs-comment">#      B2    A1    300</span>
+<span class="hljs-comment">#   Output:</span>
+<span class="hljs-comment">#      A1    B2</span>
+<span class="hljs-comment">#  </span>
+<span class="hljs-comment">#  Options:</span>
+<span class="hljs-comment">#    -h, --help  show this help message and exit</span>
+<span class="hljs-comment">#    -a FILE     Input file1</span>
+<span class="hljs-comment">#    -b FILE     Input file2</span>
+</code></pre>
+<p><strong>example</strong></p>
+<pre><code class="lang-sh">genetribe RBH <span class="hljs-_">-a</span> genome1_genome2.score -b genome2_genome1.score &gt; RBH.out
+</code></pre>
+<h2 id="62-longestcds">6.2 longestcds</h2>
+<p>The species genome generally contains tens of thousands of genes, and the total transcript may reach hundreds of thousands, and so many coding sequences are unnecessary for some analyses. Here, we provide a tool to extract the longest transcript of each gene as the representative sequences
+<br><strong>command</strong></p>
+<pre><code class="lang-sh">genetribe longestcds -h
+
+<span class="hljs-comment">#  Usage: longestfasta -i pep.fa -s strsplit</span>
+<span class="hljs-comment">#  Description: Extract the longest protein sequence from protein fasta</span>
+<span class="hljs-comment">#  </span>
+<span class="hljs-comment">#  Options:</span>
+<span class="hljs-comment">#    -h, --help  show this help message and exit</span>
+<span class="hljs-comment">#    -i FILE     Input file</span>
+<span class="hljs-comment">#    -s STR      the string of split geneid from transcript ID</span>
+</code></pre>
+<p><strong>example</strong></p>
+<pre><code class="lang-sh">longestfasta -i pep.fa <span class="hljs-_">-s</span> .
+</code></pre>
+<p><br><strong>Output</strong><br></p>
+<pre><code class="lang-sh"><span class="hljs-comment">#  &gt;AT2G27490</span>
+<span class="hljs-comment">#  MRIVGLTGGIASGKSTVSNLFKASGIPVVDADVVARDVLKKGSGGWKRVVAAFGEEILLP</span>
+<span class="hljs-comment">#  SGEVDRPKLGQIVFSSDSKRQLLNKLMAPYISSGIFWEILKQWASGAKVIVVDIPLLFEV</span>
+<span class="hljs-comment">#  KMDKWTKPIVVVWVSQETQLKRLMERDGLSEEDARNRVMAQMPLDSKRSKADVVIDNNGS</span>
+<span class="hljs-comment">#  LDDLHQQFEKVLIEIRRPLTWIEFWRSRQGAFSVLGSVILGLSVCKQLKIGS</span>
+</code></pre>
+<h2 id="63-cbs">6.3 CBS</h2>
+<p>Some collinearity analysis software, such as <code>MCscan</code>, produces outputs that include gene pairs within the collinearity blocks. Here, we provide a tool to perform statistics on the collinearity block according to the algorithm and provide rich evaluation results.
+<br><strong>command</strong></p>
+<pre><code class="lang-sh">genetribe CBS -h
+
+<span class="hljs-comment">#  Usage: coreCBS -i input.anchors -a bed1 -b bed2 &gt; outputfile</span>
+<span class="hljs-comment">#  Description: Calculate Collinearity Block Score(CBS) from result of MCscan</span>
+<span class="hljs-comment">#  </span>
+<span class="hljs-comment">#  Options:</span>
+<span class="hljs-comment">#    -h, --help  show this help message and exit</span>
+<span class="hljs-comment">#    -i FILE     The block anchors file obtaining from MCScan</span>
+<span class="hljs-comment">#    -a FILE     First bed</span>
+<span class="hljs-comment">#    -b FILE     Second bed</span>
+<span class="hljs-comment">#    -o STR      prefix name of output file</span>
+</code></pre>
+<p><strong>example</strong></p>
+<pre><code class="lang-sh"><span class="hljs-comment">#  genetribe CBS -i aet.rice.lifted.anchors -a aer.bed -b rice.bed -o test</span>
+</code></pre>
+<p><strong>Output</strong>
+<strong>1. test.block_pos</strong></p>
+<pre><code class="lang-sh"><span class="hljs-comment">#  Chr1    292378812       306611448       10      20843117        21903586        0.685</span>
+<span class="hljs-comment">#  Chr1    238973838       247016656       10      18873531        19475406        0.551</span>
+<span class="hljs-comment">#  Chr1    193706848       201208886       10      15621354        16238841        0.485</span>
+<span class="hljs-comment">#  Chr1    200618116       212196056       10      16665829        17689465        0.625</span>
+<span class="hljs-comment">#  Chr1    232172333       235525430       10      18707781        18869428        0.266</span>
+<span class="hljs-comment">#  Chr1    260674561       275221462       10      19962772        20806453        0.633</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>chromosome of collinearity block in genome 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>chromosome start of collinearity block in genome 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>chromosome end of collinearity block in genome 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>chromosome of collinearity block in genome 2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>chromosome start of collinearity block in genome 2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>chromosome end of collinearity block in genome 2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>the CBS score of collinearity block</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. test.colinearity_info</strong></p>
+<pre><code class="lang-sh"><span class="hljs-comment">#  block_13        Chr1:32978403-38610676,5:940494-1061952 84      0.40476190476190477     0.393   AET1Gv20118400,Os05g0120300; AET1Gv20125700,Os05g0120100; AET1Gv20125800,Os05g0120200; AET1Gv20130800,Os05g0119400; AET1Gv20131300,Os05g0119000; AET1Gv20131400,Os05g0118900; AET1Gv20131500,Os05g0118800; AET1Gv20131800,Os05g0118700; AET1Gv20133900,Os05g0118000; AET1Gv20134500,Os05g0117864; AET1Gv20134600,Os05g0117798; AET1Gv20125800,Os05g0120000; AET1Gv20130700,Os05g0119700</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ID of collinearity block</td>
+</tr>
+<tr>
+<td>2</td>
+<td>chromosome location of collinearity block</td>
+</tr>
+<tr>
+<td>3</td>
+<td>total number of genes in collinearity block</td>
+</tr>
+<tr>
+<td>4</td>
+<td>the ratio of homologous genes to total number of genes in collinearity block</td>
+</tr>
+<tr>
+<td>5</td>
+<td>the CBS score of collinearity block</td>
+</tr>
+<tr>
+<td>6</td>
+<td>all gene pairs in collinearity block</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="homoinfer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 5 Homologues Inference">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6 Other Ultilities","level":"1.6","depth":1,"previous":{"title":"5 Homologues Inference","level":"1.5","depth":1,"path":"homoinfer.md","ref":"homoinfer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","sharing","highlight","livereload"],"styles":{"website":"website.css"},"pluginsConfig":{"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"highlight":{},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":true,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"other.md","mtime":"2020-05-05T07:11:57.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-05T07:45:09.238Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
