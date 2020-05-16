@@ -28,10 +28,10 @@ a:hover{
   height:45px;
 } 
 
-#info{
+.info{
   position:relative;
   padding-top:15px;
-  min-height:450px;
+  min-height:400px;
 }
 
 #header-tabs ul {	
