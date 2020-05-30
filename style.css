@@ -1,5 +1,6 @@
 body{
   font-family:arial;
+  background-color:#BCD2EE;
 }
 
 h3{
@@ -26,7 +27,7 @@ h3{
 .info{
   height:350px;
   text-align:center;
-  background-color:#F5F5F5;
+  background-color:#EBEBEB;
   border-radius: 15px;
 }
 
