@@ -223,7 +223,7 @@ Note:<br>In this example. <strong>genetribe</strong> uses lines where the greate
 </ol>
 <h3 id="file2-annotation-file-in-bed-format">File2 Annotation file in bed format</h3>
 <ol>
-<li>One of input files of <strong>genetribe</strong> is <a href="https://en.wikipedia.org/wiki/BED_(file_format" target="_blank">bed</a>) format file that stores annotation information. First, you can obtain the <a href="https://en.wikipedia.org/wiki/General_feature_format" target="_blank">gff</a> file from <a href="https://www.ensembl.org/" target="_blank">Emselbl</a> or <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a>. Their file name is generally <code>name.gff3.gz</code>.</li>
+<li>One of input files of <strong>genetribe</strong> is <a href="https://en.wikipedia.org/wiki/BED_(file_format" target="_blank">bed</a> format file that stores annotation information. First, you can obtain the <a href="https://en.wikipedia.org/wiki/General_feature_format" target="_blank">gff</a> file from <a href="https://www.ensembl.org/" target="_blank">Emselbl</a> or <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI</a>. Their file name is generally <code>name.gff3.gz</code>.</li>
 <li>We decompress them all using the command <code>gunzip name.gff3.gz</code>, and rename it as <code>name.gff3</code>.</li>
 <li>We convert <code>gff</code> file to <code>bed</code> file that only contains gene line. there are two ways to choose(of course, there are more ways):<br>
 MCscan + sed:<pre><code class="lang-sh">python -m jcvi.formats.gff bed --type=gene --key=ID name.gff3 -o name.bed
