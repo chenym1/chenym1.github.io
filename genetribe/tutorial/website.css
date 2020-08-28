@@ -1,3 +1,16 @@
 .gitbook-link {
     display: none !important;
 }
+h1 {
+    color: #8EB4E3;
+    border-bottom: 1px solid #EFEAEA;
+}
+h2{
+    color: #8EB4E3;
+    border-bottom: 1px solid #EFEAEA;
+}
+
+body{
+    font-size:12pt;
+    font-family:arial;
+}

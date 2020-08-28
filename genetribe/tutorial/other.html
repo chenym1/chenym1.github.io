@@ -17,7 +17,15 @@
     
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
@@ -66,8 +74,9 @@
     
     
         
-<h3 style="text-align:center;font-family:'Times New Roman'">GeneTribe Documentation</h3>
-<a style="text-align:center" href="https://chenym1.github.io/genetribe/"><h4 style="#00688B"><-Back Home</h4></a>
+        <li>
+            <a href="https://chenym1.github.io/genetribe/" target="_blank" class="custom-link">Back Home</a>
+        </li>
     
     
 
@@ -136,7 +145,7 @@
                 <a href="homoinfer.html">
             
                     
-                    5 Homologues Inference
+                    5 Homolog Inference
             
                 </a>
             
@@ -227,7 +236,7 @@
 <pre><code class="lang-sh">genetribe RBH <span class="hljs-_">-a</span> genome1_genome2.score -b genome2_genome1.score &gt; RBH.out
 </code></pre>
 <h2 id="62-longestcds">6.2 longestcds</h2>
-<p>The species genome generally contains tens of thousands of genes, and the total transcript may reach hundreds of thousands, and so many coding sequences are unnecessary for some analyses. Here, we provide a tool to extract the longest transcript of each gene as the representative sequences
+<p>A assembly generally contains tens of thousands of genes, and number of the total transcript may reach hundreds of thousands, and so many coding sequences are unnecessary for some analyses. Here, we provide a tool to extract the longest transcript of each gene as the representative sequences
 <br><strong>command</strong></p>
 <pre><code class="lang-sh">genetribe longestcds -h
 
@@ -250,7 +259,7 @@
 <span class="hljs-comment">#  LDDLHQQFEKVLIEIRRPLTWIEFWRSRQGAFSVLGSVILGLSVCKQLKIGS</span>
 </code></pre>
 <h2 id="63-cbs">6.3 CBS</h2>
-<p>Some collinearity analysis software, such as <code>MCscan</code>, produces outputs that include gene pairs within the collinearity blocks. Here, we provide a tool to perform statistics on the collinearity block according to the algorithm and provide rich evaluation results.
+<p>Some collinearity analysis software, such as <code>MCscan</code>, produces outputs that include gene pairs within the collinearity blocks. Here, we provide a tool to perform statistics on the collinearity block according to the algorithm of <strong>genetribe</strong> and provide rich evaluation results.
 <br><strong>command</strong></p>
 <pre><code class="lang-sh">genetribe CBS -h
 
@@ -265,7 +274,7 @@
 <span class="hljs-comment">#    -o STR      prefix name of output file</span>
 </code></pre>
 <p><strong>example</strong></p>
-<pre><code class="lang-sh"><span class="hljs-comment">#  genetribe CBS -i aet.rice.lifted.anchors -a aer.bed -b rice.bed -o test</span>
+<pre><code class="lang-sh"><span class="hljs-comment">#  genetribe CBS -i aet.rice.lifted.anchors -a aet.bed -b rice.bed -o test</span>
 </code></pre>
 <p><strong>Output</strong>
 <strong>1. test.block_pos</strong></p>
@@ -286,31 +295,31 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>chromosome of collinearity block in genome 1</td>
+<td>Chromosome name in genome 1</td>
 </tr>
 <tr>
 <td>2</td>
-<td>chromosome start of collinearity block in genome 1</td>
+<td>Chromosome start location of collinearity block in genome 1</td>
 </tr>
 <tr>
 <td>3</td>
-<td>chromosome end of collinearity block in genome 1</td>
+<td>Chromosome end location of collinearity block in genome 1</td>
 </tr>
 <tr>
 <td>4</td>
-<td>chromosome of collinearity block in genome 2</td>
+<td>Chromosome name in genome 2</td>
 </tr>
 <tr>
 <td>5</td>
-<td>chromosome start of collinearity block in genome 2</td>
+<td>Chromosome start location of collinearity block in genome 2</td>
 </tr>
 <tr>
 <td>6</td>
-<td>chromosome end of collinearity block in genome 2</td>
+<td>Chromosome end location of collinearity block in genome 2</td>
 </tr>
 <tr>
 <td>7</td>
-<td>the CBS score of collinearity block</td>
+<td>The CBS score of collinearity block</td>
 </tr>
 </tbody>
 </table>
@@ -331,23 +340,23 @@
 </tr>
 <tr>
 <td>2</td>
-<td>chromosome location of collinearity block</td>
+<td>Chromosome location of collinearity block</td>
 </tr>
 <tr>
 <td>3</td>
-<td>total number of genes in collinearity block</td>
+<td>Total number of genes in collinearity block</td>
 </tr>
 <tr>
 <td>4</td>
-<td>the ratio of homologous genes to total number of genes in collinearity block</td>
+<td>The ratio of total number of homologous genes to that of all genes in collinearity block</td>
 </tr>
 <tr>
 <td>5</td>
-<td>the CBS score of collinearity block</td>
+<td>The CBS score of collinearity block</td>
 </tr>
 <tr>
 <td>6</td>
-<td>all gene pairs in collinearity block</td>
+<td>All gene pairs in collinearity block</td>
 </tr>
 </tbody>
 </table>
@@ -362,7 +371,7 @@
 
             
                 
-                <a href="homoinfer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 5 Homologues Inference">
+                <a href="homoinfer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 5 Homolog Inference">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -374,7 +383,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6 Other Ultilities","level":"1.6","depth":1,"previous":{"title":"5 Homologues Inference","level":"1.5","depth":1,"path":"homoinfer.md","ref":"homoinfer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","sharing","highlight","livereload"],"styles":{"website":"website.css"},"pluginsConfig":{"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"highlight":{},"livereload":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":true,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"other.md","mtime":"2020-05-05T07:11:57.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-05T07:45:09.238Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6 Other Ultilities","level":"1.6","depth":1,"previous":{"title":"5 Homolog Inference","level":"1.5","depth":1,"path":"homoinfer.md","ref":"homoinfer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","insert-logo","highlight","livereload","back-to-top-button"],"styles":{"website":"website.css"},"pluginsConfig":{"insert-logo":{"url":"gt_logo.png","style":"background: none; max-height: 60px; min-height: 30px"},"highlight":{},"livereload":{},"back-to-top-button":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":false,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"other.md","mtime":"2020-08-28T06:18:48.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-28T06:31:15.217Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -384,11 +393,15 @@
     <script src="gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
         
     
         
         <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
