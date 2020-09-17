@@ -214,13 +214,13 @@
 <h1 id="51-core">5.1 Core</h1>
 <h2 id="command">Command</h2>
 <pre><code class="lang-sh">genetribe core -h
-<span class="hljs-comment"># Usage:</span>
-<span class="hljs-comment"># genetribe core -l &lt;FirstName&gt; -f &lt;SecondName&gt; [options]</span>
-<span class="hljs-comment">#     </span>
+
+<span class="hljs-comment"># Tool:  GeneTribe core</span>
+<span class="hljs-comment"># Usage: genetribe core -l &lt;FirstName&gt; -f &lt;SecondName&gt; [options]</span>
+<span class="hljs-comment"># </span>
 <span class="hljs-comment"># Description:</span>
 <span class="hljs-comment">#   Core workflow of GeneTribe</span>
-<span class="hljs-comment">#   Author:Chen,Yongming; 2020-5-2; chen_yongming@126.com</span>
-<span class="hljs-comment">#     </span>
+<span class="hljs-comment"># </span>
 <span class="hljs-comment"># Options:</span>
 <span class="hljs-comment">#   -h         Show this message and exit</span>
 <span class="hljs-comment">#   -l &lt;str&gt;   Prefix name of first file</span>
@@ -228,10 +228,12 @@
 <span class="hljs-comment">#   -d &lt;dir&gt;   Pre-computed BLAST file in &lt;dir&gt; [default ./]</span>
 <span class="hljs-comment">#   -r         Calculate chromosome group score [default True]</span>
 <span class="hljs-comment">#   -c         Calculate confidence score [default False]</span>
-<span class="hljs-comment">#   -s &lt;str&gt;   The separator between gene name and number in the header of fasta [default .]</span>
+<span class="hljs-comment">#   -s &lt;str&gt;   The string for spliting gene from transcript ID [default .]</span>
 <span class="hljs-comment">#   -e         E-value of BLASTP [default 1e-5]</span>
 <span class="hljs-comment">#   -n &lt;int&gt;   Number of threads for blast [default 36]</span>
 <span class="hljs-comment">#   -b &lt;float&gt; Threshold based on BSR for filtering Match Score(0-100) [default 75]</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># Author: Chen,Yongming; chen_yongming@126.com</span>
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <center>Table 3. Parameters in genetribe core</center>
@@ -311,16 +313,19 @@
 <h1 id="52-sameassembly">5.2 sameassembly</h1>
 <h2 id="command">command</h2>
 <pre><code class="lang-sh">genetribe sameassembly -h
-<span class="hljs-comment"># Usage:</span>
-<span class="hljs-comment">#   genetribe sameassembly -l &lt;firstname&gt; -f &lt;secondname&gt;</span>
+
+<span class="hljs-comment"># Tool:  GeneTribe sameassembly</span>
+<span class="hljs-comment"># Usage: genetribe sameassembly -l &lt;firstname&gt; -f &lt;secondname&gt; [options]</span>
+<span class="hljs-comment"># </span>
 <span class="hljs-comment"># Description:</span>
-<span class="hljs-comment">#   Homolog inference for the same assembly</span>
-<span class="hljs-comment"># Author:Chen,Yongming;2019-3-20</span>
+<span class="hljs-comment">#   Homology inference for the same assembly</span>
 <span class="hljs-comment"># </span>
 <span class="hljs-comment"># Options:</span>
 <span class="hljs-comment">#   -h Show this message and exit</span>
 <span class="hljs-comment">#   -l &lt;string&gt; Prefix name of first assembly</span>
 <span class="hljs-comment">#   -f &lt;string&gt; Prefix name of second assembly</span>
+<span class="hljs-comment"># </span>
+<span class="hljs-comment"># Author: Chen,Yongming; chen_yongming@126.com</span>
 </code></pre>
 <h2 id="parameters">Parameters</h2>
 <center>Table 4. Parameters in genetribe sameassembly</center>
@@ -378,7 +383,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5 Homolog Inference","level":"1.5","depth":1,"next":{"title":"6 Other Utilities","level":"1.6","depth":1,"path":"other.md","ref":"other.md","articles":[]},"previous":{"title":"4 File Formats","level":"1.4","depth":1,"path":"fileformats.md","ref":"fileformats.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","insert-logo","highlight","livereload","back-to-top-button"],"styles":{"website":"website.css"},"pluginsConfig":{"insert-logo":{"url":"gt_logo.png","style":"background: none; max-height: 60px; min-height: 30px"},"highlight":{},"livereload":{},"back-to-top-button":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":false,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"homoinfer.md","mtime":"2020-08-28T14:29:43.005Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-17T08:27:39.416Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5 Homolog Inference","level":"1.5","depth":1,"next":{"title":"6 Other Utilities","level":"1.6","depth":1,"path":"other.md","ref":"other.md","articles":[]},"previous":{"title":"4 File Formats","level":"1.4","depth":1,"path":"fileformats.md","ref":"fileformats.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","insert-logo","highlight","livereload","back-to-top-button"],"styles":{"website":"website.css"},"pluginsConfig":{"insert-logo":{"url":"gt_logo.png","style":"background: none; max-height: 60px; min-height: 30px"},"highlight":{},"livereload":{},"back-to-top-button":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":false,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"homoinfer.md","mtime":"2020-09-17T13:01:10.341Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-17T13:51:50.361Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
