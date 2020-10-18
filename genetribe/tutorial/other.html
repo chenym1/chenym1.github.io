@@ -259,12 +259,12 @@
 <span class="hljs-comment">#  LDDLHQQFEKVLIEIRRPLTWIEFWRSRQGAFSVLGSVILGLSVCKQLKIGS</span>
 </code></pre>
 <h2 id="63-cbs">6.3 CBS</h2>
-<p>Some collinearity analysis software, such as <code>MCscan</code>, produces outputs that include gene pairs within the collinearity blocks. Here, we provide a tool to perform statistics on the collinearity block according to the algorithm of <strong>genetribe</strong> and provide rich evaluation results.
+<p>Some collinearity analysis software, such as <code>MCscan</code>, produces outputs that include gene pairs within the collinear blocks. Here, we provide a tool to perform statistics on the collinear block according to the algorithm of <strong>genetribe</strong> and provide rich evaluation results.
 <br><strong>command</strong></p>
 <pre><code class="lang-sh">genetribe CBS -h
 
 <span class="hljs-comment"># Usage: coreCBS -i input.anchors -a bed1 -b bed2 -o outname</span>
-<span class="hljs-comment"># Description: calculate Collinearity Block Score (CBS)</span>
+<span class="hljs-comment"># Description: calculate Collinear Block Score (CBS)</span>
 <span class="hljs-comment"># </span>
 <span class="hljs-comment"># Options:</span>
 <span class="hljs-comment">#   -h, --help  show this help message and exit</span>
@@ -299,11 +299,11 @@
 </tr>
 <tr>
 <td>2</td>
-<td>Chromosome start location of collinearity block in genome 1</td>
+<td>Chromosome start location of collinear block in genome 1</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Chromosome end location of collinearity block in genome 1</td>
+<td>Chromosome end location of collinear block in genome 1</td>
 </tr>
 <tr>
 <td>4</td>
@@ -311,15 +311,15 @@
 </tr>
 <tr>
 <td>5</td>
-<td>Chromosome start location of collinearity block in genome 2</td>
+<td>Chromosome start location of collinear block in genome 2</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Chromosome end location of collinearity block in genome 2</td>
+<td>Chromosome end location of collinear block in genome 2</td>
 </tr>
 <tr>
 <td>7</td>
-<td>The CBS score of collinearity block</td>
+<td>The CBS score of collinear block</td>
 </tr>
 </tbody>
 </table>
@@ -336,27 +336,27 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>ID of collinearity block</td>
+<td>ID of collinear block</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Chromosome location of collinearity block</td>
+<td>Chromosome location of collinear block</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Total number of genes in collinearity block</td>
+<td>Total number of genes in collinear block</td>
 </tr>
 <tr>
 <td>4</td>
-<td>The ratio of total number of homologous genes to that of all genes in collinearity block</td>
+<td>The ratio of total number of homologous genes to that of all genes in collinear block</td>
 </tr>
 <tr>
 <td>5</td>
-<td>The CBS score of collinearity block</td>
+<td>The CBS score of collinear block</td>
 </tr>
 <tr>
 <td>6</td>
-<td>All gene pairs in collinearity block</td>
+<td>All gene pairs in collinear block</td>
 </tr>
 </tbody>
 </table>
@@ -383,7 +383,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6 Other Utilities","level":"1.6","depth":1,"previous":{"title":"5 Homology Inference","level":"1.5","depth":1,"path":"homoinfer.md","ref":"homoinfer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","insert-logo","highlight","livereload","back-to-top-button"],"styles":{"website":"website.css"},"pluginsConfig":{"insert-logo":{"url":"gt_logo.png","style":"background: none; max-height: 60px; min-height: 30px"},"highlight":{},"livereload":{},"back-to-top-button":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":false,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"other.md","mtime":"2020-09-17T13:08:01.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-21T02:20:18.025Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6 Other Utilities","level":"1.6","depth":1,"previous":{"title":"5 Homology Inference","level":"1.5","depth":1,"path":"homoinfer.md","ref":"homoinfer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","insert-logo","highlight","livereload","back-to-top-button"],"styles":{"website":"website.css"},"pluginsConfig":{"insert-logo":{"url":"gt_logo.png","style":"background: none; max-height: 60px; min-height: 30px"},"highlight":{},"livereload":{},"back-to-top-button":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"GeneTribe","theme":"theme-gray","author":"Chen, Yongming"},"links":{"gitbook":false,"sidebar":{"Back Home":"https://chenym1.github.io/genetribe/"}},"gitbook":"*"},"file":{"path":"other.md","mtime":"2020-10-18T13:06:36.450Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-18T13:12:11.992Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
