@@ -32,7 +32,7 @@ a{text-decoration: none;}
 }
 
 .info{
-  height:350px;
+  height:450;
   text-align:center;
   background-color:#fff;
   border-style: solid;
@@ -42,7 +42,7 @@ a{text-decoration: none;}
 
 .links{
   margin:0 auto;
-  width:500px;
+  width:700px;
   text-align:left;
 }
 
