@@ -1,71 +1,141 @@
-body{
-  margin:0;
-  font-family:arial;
-  background-color:#fff;
+/* 全局样式 */
+
+* {
+	box-sizing: border-box;
 }
 
-a{text-decoration: none;} 
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
 
-.header{
+h3 {
+  color:#107D7D;
+}
+
+h4 {
+  color:#EE7942;
+}
+
+.numbers {
+  color:#CD0000;
+  font-weight:bold;
+  font-size:14pt;
+}
+
+.highlight_conent {
+  color:#008B00;
+  font-weight:bold;
+  margin-top:1px;
+  padding-top:1px
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* 头部 */
+#nameheader {
   background-color:	#2E8B57;
-  margin:0 0 60px 0;
+  margin:0 0 0 0;
   padding:20px 0 20px 0;
   text-align:center;
 }
 
-.titlename{
+#titlename {
   font-size:25pt;
   color:#fff;
   vertical-align: middle;
 }
 
-.forepanel{
-  margin:0 auto;
-  width:750px; 
-  height:450px;
-  margin-bottom:20px;
+
+header {
+	background-color: #CFCFCF;
+	padding: 5px 0;
 }
 
-.blue{
-  color:#000;
-  text-align:left;
+header h1 {
+	font-size: 2em;
+	margin: 0;
 }
 
-.info{
-  height:450;
-  text-align:center;
-  background-color:#fff;
-  border-style: solid;
-  border-color: #000;
-  border-radius: 15px;
+header nav {
+	margin-top: 5px;
 }
 
-.links{
-  margin:0 auto;
-  width:700px;
-  text-align:left;
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
 }
 
-.logo{
-  vertical-align:middle;
-  height:20px;
-  margin-right:5px
+header nav li {
+	margin-right: 20px;
+	margin-bottom: 5px;
+	color:#008B8B;
 }
 
-#table_info{
-  margin:0 auto;
+header nav li:last-child {
+	margin-right: 0;
 }
 
-#table_info td{
-  height:30px;
-  margin:0 auto;
-  padding-left:30px;
-  text-align:left;
-  font-size:16pt;
+header nav a {
+	color:#000;
+	font-weight:bold;
+	text-decoration:none
 }
 
-#table_info tr{
-  height:80px;
-  margin:0 auto;
-  text-align:left;
+header nav a:hover {
+	color: #666;
+}
+
+/* 主体部分 */
+
+main {
+	padding: 50px 0;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+section h2 {
+	font-size: 1.5em;
+	margin: 0 0 20px 0;
+}
+
+section p {
+	line-height: 1.5;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border-radius: 5px;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #666;
+}
+
+/* 页脚 */
+
+footer {
+	background-color: #f9f9f9;
+	padding: 20px 0;
+}
+
+footer p {
+	margin: 0;
+	text-align: center;
+	font-size: 0.8em;
+	color: #999;
 }
