@@ -139,3 +139,17 @@ footer p {
 	font-size: 0.8em;
 	color: #999;
 }
+
+.altmetric {
+    float: right;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px
+}
+.dimensions {
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px
+}
+    
