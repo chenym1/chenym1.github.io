@@ -1,0 +1,56 @@
+include ../review/_review
+
+// In the press
+section.section.section-md.bg-900.context-dark.novi-background( data-preset!={ title:'Reviews', category:'quote', reload:true, id:'reviews' } )
+	.container
+		h1 What visitors are saying
+		// Owl Carousel
+		.owl-carousel( data-owl= { dots: true }, data-items='1', data-md-items='2', data-xl-items='3')
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in tincidunt quis sapien, urna sed. Mauris, viverra metus, habitasse varius tempor. Neque id enim sit tincidunt.',
+				name: 'Melissa Parker',
+				time: {
+					date: '2020-05-27',
+					text: 'June 27, 2020'
+				}
+			})
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl adipiscing scelerisque ridiculus cursus ut sed ut.',
+				name: 'Norma Ramirez',
+				time: {
+					date: '2020-06-27',
+					text: 'June 27, 2020'
+				}
+			})
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ut volutpat faucibus. Dui praesent at etiam vestibulum metus ac.',
+				name: 'Kimberly Harris',
+				time: {
+					date: '2020-07-27',
+					text: 'June 27, 2020'
+				}
+			})
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in tincidunt quis sapien, urna sed. Mauris, viverra metus, habitasse varius tempor. Neque id enim sit tincidunt.',
+				name: 'Gloria Henderson',
+				time: {
+					date: '2020-05-27',
+					text: 'June 27, 2020'
+				}
+			})
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl adipiscing scelerisque ridiculus cursus ut sed ut.',
+				name: 'Jack Jenkins',
+				time: {
+					date: '2020-06-27',
+					text: 'June 27, 2020'
+				}
+			})
+			+review({
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ut volutpat faucibus. Dui praesent at etiam vestibulum metus ac.',
+				name: 'Joshua Hughes',
+				time: {
+					date: '2020-07-27',
+					text: 'June 27, 2020'
+				}
+			})

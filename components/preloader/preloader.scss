@@ -1,0 +1,107 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Variables
+$blendmode: hard-light;
+$size: 100px;
+$thickness: 8px;
+
+$color-1: $gray-900;
+$color-2: $gray-300;
+$color-3: $color-1;
+$color-4: $color-2;
+
+$timing1: 2s;
+$timing2: 1.8s;
+$delay: $timing1/4;
+
+
+// Animation
+@keyframes rotateCircle {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+
+// Base
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $zindex-modal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $body-bg;
+	pointer-events: none;
+	transition: .2s;
+
+	.page-loaded & {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.preloader-inner {
+	display: inline-block;
+	position: relative;
+}
+
+.preloader-line-mask {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: $size/2;
+	height: $size;
+	margin-left: -$size/2;
+	margin-top: -$size/2;
+	overflow: hidden;
+	transform-origin: $size/2 $size/2;
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	mix-blend-mode: $blendmode;
+	opacity: 0.8;
+
+	.preloader-line {
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+	}
+
+	&.one {
+		animation: rotateCircle $timing1 infinite linear;
+
+		.preloader-line {
+			box-shadow: inset 0 0 0 8px $color-2;
+		}
+	}
+
+	&.two {
+		animation: rotateCircle $timing2 $delay infinite linear;
+
+		.preloader-line {
+			box-shadow: inset 0 0 0 8px $color-3;
+		}
+	}
+
+	&.three {
+		animation: rotateCircle $timing1 $delay*2 infinite linear;
+
+		.preloader-line {
+			box-shadow: inset 0 0 0 8px $color-4;
+		}
+	}
+
+	&.four {
+		animation: rotateCircle $timing2 ($delay*3) - (($timing1 - $timing2) / 2) infinite linear;
+
+		.preloader-line {
+			box-shadow: inset 0 0 0 8px $color-1;
+		}
+	}
+}

@@ -1,0 +1,176 @@
+include ../post/_post-content-sample
+
+//- Post classic
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} data.img - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+	@param {string} data.autor - post autor
+	@param {string} data.date - post publication date
+	@param {string} data.comments - post comments
+	@param {array} [data.tags] - post tags array
+	@param {string} data.btnText - post btn text
+mixin post-classic( data )
+	// Post classic
+	.post&attributes( attributes )
+		h3.post-title: a( href= data.link ? data.link : 'single-post.html' )= data.title
+		.post-meta
+			if ( data.label )
+				.post-meta-item: a.post-meta-link.post-meta-link-primary( href='single-post.html' )= data.label
+			.post-meta-item
+				span.post-meta-icon.int-user.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.autor
+			.post-meta-item
+				span.post-meta-icon.int-clock.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.date
+		a.post-img-link( href= data.link ? data.link : 'single-post.html' )
+			+img( data.img )
+		.post-text= data.postText
+		.post-meta
+			.post-meta-item
+				span.post-meta-icon.int-chat.novi-icon
+				a.post-meta-link( href= data.link ? data.link : 'single-post.html' )= data.coments
+			if ( data.tags )
+				.post-meta-item
+					span.post-meta-icon.int-tag.novi-icon
+					.post-tags
+						= 'Tags: '
+						each tag, index in data.tags
+							a.post-tag( href='single-post.html' )= tag
+							if ( index < data.tags.length - 1 )
+								= ', '
+		a.btn.btn-primary.post-btn( href= data.link ? data.link : 'single-post.html' )= data.btnText ? data.btnText : 'Read more'
+
+//- Post classic 1
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} data.img - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+	@param {string} data.autor - post autor
+	@param {string} data.date - post publication date
+	@param {string} data.comments - post comments
+	@param {array} [data.tags] - post tags array
+	@param {string} data.btnText - post btn text
+mixin post-classic-1( data )
+	// Post classic 1
+	.post&attributes( attributes )
+		a.post-img-link( href= data.link ? data.link : 'single-post.html' )
+			+img( data.img )
+		h3.post-title: a( href= data.link ? data.link : 'single-post.html' )= data.title
+		.post-meta
+			if (data.label)
+				.post-meta-item: a.post-meta-link( href= data.link ? data.link : 'single-post.html' )= data.label
+			.post-meta-item
+				span.post-meta-icon.int-user.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.autor
+			.post-meta-item
+				span.post-meta-icon.int-clock.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.date
+		.post-text= data.postText
+		.post-meta.post-meta-footer
+			.post-meta-item
+				a.btn.btn-dark.btn-rect.post-btn( href= data.link ? data.link : 'single-post.html' )= data.btnText ? data.btnText : 'Read more'
+			.post-meta-item
+				span.post-meta-icon.int-chat.novi-icon
+				a.post-meta-link( href= data.link ? data.link : 'single-post.html' )= data.coments
+
+//- Post classic 2
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} data.img - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+	@param {string} data.autor - post autor
+	@param {string} data.date - post publication date
+	@param {string} data.comments - post comments
+	@param {string} data.btnText - post btn text
+mixin post-classic-2( data )
+	// Post classic
+	.post&attributes( attributes )
+		a.post-img-link( href= data.link ? data.link : 'single-post.html' )
+			+img( data.img )
+		.post-meta
+			if (data.label)
+				.post-meta-item: a.post-meta-link( href= data.link ? data.link : 'single-post.html' )= data.label
+			.post-meta-item
+				span.post-meta-icon.int-user.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.autor
+			.post-meta-item
+				span.post-meta-icon.int-clock.novi-icon
+				a.post-meta-link( href='single-post.html' )= data.date
+		h5.post-title: a( href= data.link ? data.link : 'single-post.html' )= data.title
+		.post-text= data.postText
+		.post-meta
+			.post-meta-item
+				a.btn.btn-dark.btn-rect.post-btn( href= data.link ? data.link : 'single-post.html' )= data.btnText ? data.btnText : 'Read more'
+			.post-meta-item
+				span.post-meta-icon.int-chat.novi-icon
+				a.post-meta-link( href= data.link ? data.link : 'single-post.html' )= data.coments
+
+//- Post classic 3
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} data.img - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+mixin post-classic-3( data )
+	// Post classic
+	.post&attributes( attributes )
+		a.post-img-link( href= data.link ? data.link : 'single-post.html' )
+			+img( data.img )
+		if (data.label)
+			.post-meta
+				.post-meta-item: a.post-meta-link.post-meta-link-primary( href= data.link ? data.link : 'single-post.html' )= data.label
+		h4.post-title: a( href= data.link ? data.link : 'single-post.html' )= data.title
+
+//- Post classic 4
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} data.img - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+mixin post-classic-4( data )
+	// Post classic
+	.post&attributes( attributes )
+		a.post-img-link( href= data.link ? data.link : 'single-post.html' )
+			+img( data.img )
+		if (data.label)
+			.post-meta
+				.post-meta-item: a.post-meta-link.post-meta-link-primary( href= data.link ? data.link : 'single-post.html' )= data.label
+		h3.post-title: a( href= data.link ? data.link : 'single-post.html' )= data.title
+
+//- Post simple
+	@param {object} data - thumbnail data object
+	@param {string} data.title - post title
+	@param {string} [data.img] - post image
+	@param {string} [data.link] - post main link
+	@param {string} [data.label] - post label
+	@param {string} [data.autor] - post autor
+	@param {string} [data.date] - post publication date
+	@param {string} [data.btnText] - post btn text
+mixin post-simple( data )
+	// Post simple
+	.post.post-simple&attributes( attributes )
+		if ( data.img )
+			a.post-img-link( href= data.link ? data.link : 'post-intro.html' )
+				+img( data.img )
+		if ( data.autor )
+			.post-meta
+				.post-meta-item
+					span.post-meta-icon.int-user.novi-icon
+					a.post-meta-link( href='post-intro.html' )= data.autor
+		h5.post-title: a( href= data.link ? data.link : 'post-intro.html' )= data.title
+		if ( data.postText )
+			.post-text= data.postText
+		if ( data.label || data.date)
+			.post-meta
+				if ( data.label )
+					.post-meta-item: a.post-meta-link.post-meta-link-primary( href='post-intro.html' )= data.label
+				if ( data.date )
+					.post-meta-item
+						span.post-meta-icon.int-clock.novi-icon
+						a.post-meta-link( href='post-intro.html' )= data.date
+		if ( data.btnText )
+			a.btn.btn-secondary.post-btn( href= data.link ? data.link : 'post-intro.html' )= data.btnText

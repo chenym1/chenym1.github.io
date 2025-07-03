@@ -1,0 +1,87 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.content-row {
+	text-align: center;
+	padding-bottom: 1px;
+	@include group( 20px, 20px );
+}
+
+.content-row-body {
+	flex: 1;
+}
+
+.content-row-img-shadow {
+	box-shadow: $box-shadow-sm;
+}
+
+.content-row-title-item {
+	display: block;
+}
+
+.content-row-text {
+	font-size: $font-size-sm;
+}
+
+.content-row + .content-row {
+	margin-top: 25px;
+	padding-top: 25px;
+	border-top: 1px solid $border-color;
+}
+
+
+// Spacing
+* + .content-row { margin-top: 30px }
+* + .content-row-text { margin-top: 10px }
+h5 + .content-row-text { margin-top: 5px }
+
+// Media
+@include media-breakpoint-up( md ) {
+	.content-row {
+		display: flex;
+		align-items: center;
+		text-align: left;
+	}
+
+	.content-row-max-width {
+		padding-right: px-to-rem( 40px );
+		align-items: flex-start;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.content-row {
+		@include group( 40px, 40px );
+	}
+
+	.content-row + .content-row {
+		margin-top: 59px;
+		padding-top: 60px;
+	}
+
+	.content-row-sm + .content-row-sm {
+		margin-top: 41px;
+		padding-top: 38px;
+	}
+
+	.content-row-max-width {
+		padding-right: px-to-rem( 120px );
+	}
+
+	* + .content-row { margin-top: 90px }
+	* + .content-row-text { margin-top: 20px }
+	h5 + .content-row-text { margin-top: 9px }
+	* + .content-row-sm { margin-top: 41px }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.content-row-max-width {
+		padding-right: px-to-rem( 210px );
+	}
+}

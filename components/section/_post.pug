@@ -1,0 +1,107 @@
+include ../post/_post
+include ../pag/_pag
+include ../person/_person
+include ../quote-simple/_quote-simple
+include ../comment/_comment
+
+// Post without sidebar
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Post Without Sidebar', category:'blog', reload:true, id:'post-without-sidebar' } )
+	.container
+		.row.row-40.justify-content-xxl-between.novi-disabled
+			.col-md-4.col-xxl-3.text-center
+				+person({
+					img:      'person-01-120x120',
+					title:    'Mark Rogers',
+					subtitle: 'Blog editor',
+					text:     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper vel tortor, est aenean. Nulla nulla orci in dolor egestas libero.',
+					links: [
+						{ iconClass: 'int-youtube' },
+						{ iconClass: 'int-facebook' },
+						{ iconClass: 'int-instagram' }
+					]
+				}).person-rounded.person-sm.blog-article-person
+			.col-md-8
+				.blog-article.clearfix
+					.post-meta.post-meta-between
+						.post-meta-item: a.post-meta-link.post-meta-linkbox( href='#' ) News
+						.post-meta-item
+							span.post-icon.int-clock.novi-icon
+							span.post-meta-text September 16, 2020
+					h2 Understanding client-side GraphQl with Apollo-client in React apps
+					figure.figure
+						+img( 'image-16-840x540' ).figure-img
+						figcaption.figure-caption Using GraphQL
+					p
+						span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						span.figure.figure-float.figure-float-left
+							+img( 'image-17-380x245').figure-img
+							span.figure-caption Collaborative work
+						span Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+						!= ' <b>minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</b>'
+						span . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod
+						!= ' <mark>tempor incididunt</mark> '
+						span ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						span Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet conse ctetur adipisicing.
+
+					.post-share.post-share-1
+						.post-share-title Share
+						a.post-share-icon.int-facebook.novi-icon( href='#' )
+						a.post-share-icon.int-twitter.novi-icon( href='#' )
+
+					hr.divider.divider-sm.post-single-divider
+
+					h3.blog-article-subtitle Related posts
+					.row.row-40
+						.col-xs-10.col-sm-6
+							+post-classic-2({
+								title:    '20 amazing sources of web design inspiration',
+								label:    'News',
+								autor:    'Mark Rogers',
+								date:     'September 16, 2020',
+								img:      'image-12-400x257',
+								postText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim nec, amet, dictum eros.',
+								coments:  '3'
+							}).post-sm
+						.col-xs-10.col-sm-6
+							+post-classic-2({
+								title:    'Inspired design decisions: Art direction as social equity',
+								label:    'News',
+								autor:    'Mark Rogers',
+								date:     'September 16, 2020',
+								img:      'image-18-400x257',
+								postText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu morbi morbi fermentum.',
+								coments:  '3'
+							}).post-sm
+
+					hr.divider.divider-sm.post-single-divider
+
+					h6.blog-article-subtitle 3 Comment(s)
+					+comment({
+						name: 'John Smith',
+						time: {
+							date: '2020-09-16',
+							text: 'September 16, 2020'
+						},
+						text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam.'
+					}).comment-cloud
+						+comment({
+							img:  'person-01-60x60',
+							name: 'Mark Rogers',
+							time: {
+								date: '2020-09-16',
+								text: 'September 16, 2020'
+							},
+							text: 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit'
+						}).comment-cloud
+					+comment({
+						name: 'Emma Adams',
+						time: {
+							date: '2020-09-16',
+							text: 'September 16, 2020'
+						},
+						text: 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.'
+					}).comment-cloud
+
+					hr.divider.divider-sm.post-single-divider
+
+					include ../post/_post-form-comment

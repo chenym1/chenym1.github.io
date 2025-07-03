@@ -1,0 +1,2 @@
+.breadcrumb {	padding-top: 1.4375rem;	display: flex;	flex-wrap: wrap;	margin-left: -16px;	margin-right: -16px;	font-size: 0.9375rem;	list-style: none;}.breadcrumb-item {	position: relative;	padding: 0 16px;}.breadcrumb-text,.breadcrumb-link {	display: inline-block;	line-height: 1.5;}.breadcrumb-link {	color: inherit;}.breadcrumb-active {	color: #6b39bd;}.rd-navbar-fullwidth-linked .breadcrumb {	margin-top: 1.5rem;	border-top: 1px solid #e8e8e9;}
+/*# sourceMappingURL=breadcrumb.css.map */

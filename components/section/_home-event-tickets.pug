@@ -1,0 +1,15 @@
+include ../content-row/_content-row
+
+// Tickets
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Tickets', category:'content box', reload:false, id:'tickets' } )
+	.container.content-row-area.text-center.text-md-left
+		h1( data-animate!={ class: 'fadeIn' } ) Tickets
+		+content-row-2({
+			title: 'Conference Ticket'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig' } )
+		+content-row-2({
+			title: 'Conference Ticket + Workshops'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig', delay: '0.15s' } )
+		+content-row-2({
+			title: 'Team Conference Ticket + Workshops'
+		}).content-row-sm( data-animate!={ class: 'fadeInRightBig', delay: '0.3s' } )

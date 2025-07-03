@@ -1,0 +1,52 @@
+include ../thumbnail-frode/_thumbnail-frode
+include ../thumbnail/_thumbnail-content-sample
+
+// Portfolio frode
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Portfolio Frode', category:'thumbnail, gallery, isotope', reload:true, id:'portfolio-frode' } )
+	.container.text-center
+		h1 Gallery
+		.isotope-wrap.isotope-line
+			.isotope-filters
+				.isotope-filter.active( data-isotope-filter="*" ) All
+				.isotope-filter( data-isotope-filter=".design" ) Design
+				.isotope-filter( data-isotope-filter=".development" ) Development
+				.isotope-filter( data-isotope-filter=".marketing" ) Marketing
+			.isotope.row.row-15.row-md-30.row-xl-80.gutters-14.gutters-md-base
+				.col-sm-6.isotope-item.development
+					+thumbnail-frode({
+						img:         'image-06-620x420',
+						title:       'Web design',
+						description: 'Delivering quality web design services to our clients.'
+					})
+				.col-sm-6.isotope-item.marketing
+					+thumbnail-frode({
+						img:         'image-07-620x420',
+						title:       'Web development',
+						description: 'Creating dynamic and responsive websites.'
+					})
+
+				.col-sm-6.isotope-item.development
+					+thumbnail-frode({
+						img:         'image-08-620x420',
+						title:       'Back-end development',
+						description: 'Handling the ‘behind-the-scenes’ functionality of web applications.'
+					})
+				.col-sm-6.isotope-item.design
+					+thumbnail-frode({
+						img:         'image-09-620x420',
+						title:       'UX design',
+						description: 'Designing appealing and functional interfaces.'
+					})
+
+				.col-sm-6.isotope-item.marketing
+					+thumbnail-frode({
+						img:         'image-10-620x420',
+						title:       'Content marketing',
+						description: 'An essential part of the digital marketing strategy for any business.'
+					})
+				.col-sm-6.isotope-item.design
+					+thumbnail-frode({
+						img:         'image-11-620x420',
+						title:       'Search engine optimization',
+						description: 'Optimize your website and take it higher on Google rankings.'
+					})

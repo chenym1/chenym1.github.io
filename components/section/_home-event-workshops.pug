@@ -1,0 +1,17 @@
+include ../content-row/_content-row
+
+// Workshops
+section.section.section-xl.bg-200.novi-background( data-preset!={ title:'Workshops', category:'content box', reload:false, id:'workshops' } )
+	.container.content-row-area
+		h1.text-center.text-md-left( data-animate!={ class: 'fadeInUp' } ) Workshops
+		p.text-center.text-md-left( data-animate!={ class: 'fadeInUp' } ): span.h6.d-inline-block( style='max-width:690px' ) The workshops available throughout all OpenWeb conference are a perfect opportunity for learning something new. From new technologies to unique web development skills, our workshops have a lot to offer.
+		+content-row({
+			img: 'image-19-180x180',
+			title: 'A Real-World Design Systems Workshop',
+			text: 'This workshop focuses on this real-world scenario most of us face in design systems, and how to move forward. Intended Audience: Intermediate Design Systems Practitioners'
+		})( data-animate!={ class: 'fadeInUp' } )
+		+content-row({
+			img: 'image-20-180x180',
+			title: 'UI/UX Design Workshop',
+			text: 'Our UI design workshop will let you summarize and demonstrate all stages of the UI/UX development process, from user research to defining a project’s strategy, scope, and information architecture.'
+		})( data-animate!={ class: 'fadeInUp' } )

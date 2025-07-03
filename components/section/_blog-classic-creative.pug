@@ -1,0 +1,62 @@
+include ../post/_post
+include ../pag/_pag
+
+// Classic layout cretive
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Blog Classic', category:'blog', reload:false, id:'blog-classic-4' } )
+	.container
+		h1.text-center Classic blog
+		.post-container
+			.post-container-item
+				+post-classic-1({
+					label:    'News',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2020',
+					title:    '20 amazing sources of web design inspiration',
+					img:      'image-12-570x366',
+					postText: 'Non enim quam fringilla mi rhoncus quis quam. Eu nibh purus dui sit ac consequat ultricies nunc netus. Facilisi lorem egestas nisl turpis pellentesque nisl vitae diam.',
+					coments:  '3'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'News',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2020',
+					title:    'Understanding client-side GraphQl with Apollo-client in React apps',
+					img:      'image-13-570x366',
+					postText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
+					coments:  '3'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'News',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2020',
+					title:    'Inspired design decisions: Art direction as social equity',
+					img:      'image-14-570x366',
+					postText: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+					coments:  '3'
+				})
+
+			.post-container-item
+				+post-classic-1({
+					label:    'News',
+					autor:    'Mark Rogers',
+					date:     'September 16, 2020',
+					title:    'Create a responsive dashboard with Angular material',
+					img:      'image-15-570x366',
+					postText: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.',
+					coments:  '3'
+				})
+
+		+pag-simple([
+			{ value: '1', actionClass: 'active' },
+			{ value: '2' },
+			{ value: '3' },
+			{ value: '4' },
+			{ value: '5' },
+			{ value: '..', class: 'inactive' },
+			{ value: '24' },
+			{ next: true }
+		]).justify-content-center

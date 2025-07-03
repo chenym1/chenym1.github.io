@@ -1,0 +1,52 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Variables
+$breadcrumb-font-size: px-to-rem( 15px );
+$breadcrumb-item-padding: 16px;
+$breadcrumb-divider: '\2022';
+$breadcrumb-divider-color: $gray-300;
+$breadcrumb-primary: $primary;
+$breadcrumb-secondary: $secondary;
+
+
+// Base
+.breadcrumb {
+	padding-top: px-to-rem( 23px );
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$breadcrumb-item-padding;
+	margin-right: -$breadcrumb-item-padding;
+	font-size: $breadcrumb-font-size;
+	list-style: none;
+}
+
+.breadcrumb-item {
+	position: relative;
+	padding: 0 $breadcrumb-item-padding;
+}
+
+.breadcrumb-text,
+.breadcrumb-link {
+	display: inline-block;
+	line-height: 1.5;
+}
+
+.breadcrumb-link {
+	color: inherit;
+}
+
+.breadcrumb-active {
+	color: $breadcrumb-primary;
+}
+
+.rd-navbar-fullwidth-linked {
+	.breadcrumb {
+		margin-top: px-to-rem( 24px );
+		border-top: 1px solid $border-color;
+	}
+}

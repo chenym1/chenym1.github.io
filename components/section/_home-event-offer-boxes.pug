@@ -1,0 +1,18 @@
+include ../offer-box/_offer-box
+
+// Offer
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Offers', category:'offer box', reload:false, id:'offer-2' } )
+	.container
+		.row.justify-content-center.row-40.row-lg-50.row-xl-70.row-xxl-90
+			.col-md-6( data-animate!={ class: 'fadeInLeft' } )
+				+offer-box-divided({
+					subtitle: 'Speakers',
+					title: 'Let your voice be heard at this year’s OpenWeb Conference',
+					text: 'We are always open to those who want to share knowledge. Feel free to participate in the call for papers by filling out a short form. Deadline: September 1'
+				})
+			.col-md-6( data-animate!={ class: 'fadeInRight' } )
+				+offer-box-divided({
+					subtitle: 'Sponsors',
+					title:    'Bring your organization closer to our community',
+					text:     'Support our event and receive the sponsor status to help promoting knowledge-sharing across brilliant minds of web design and development industry.'
+				})

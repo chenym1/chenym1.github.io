@@ -1,0 +1,47 @@
+include ../multiswitch/_multiswitch
+include ../pricing/_pricing
+
+// Pricing box
+section.section.section-lg.bg-transparent.novi-background( data-preset!={ title:'Pricing Box', category:'price', reload:true, id:'pricing-box' } )
+	.container
+		.row.justify-content-center.text-center.text-lg-left
+			.col-12
+				h1 Choose a ticket
+		.plans
+			.row.row-30.align-items-end.novi-disabled
+				.col-lg-4
+					+pricing-box({
+						title: 'Conference ticket',
+						subtitle: 'Ideal for getting started',
+						price: '35',
+						list: [
+								{ iconClass: 'int-check-circle-filled', title: 'Conference Ticket' },
+								{ iconClass: 'int-check-circle-filled', title: 'Free Lunch And Coffee' },
+								{ iconClass: 'int-close', title: 'Certificate' },
+								{ iconClass: 'int-close', title: 'Free Contacts' }
+						]
+					})
+
+				.col-lg-4
+					+pricing-box({
+						title: 'Conference ticket + workshops',
+						price: '55',
+						list: [
+						{ iconClass: 'int-check-circle-filled', title: 'Conference Ticket' },
+						{ iconClass: 'int-check-circle-filled', title: 'Free Lunch And Coffee' },
+						{ iconClass: 'int-check-circle-filled', title: 'Certificate' },
+						{ iconClass: 'int-close', title: 'Free Contacts' }
+						]
+					}).pricing-box-accent-dark
+
+				.col-lg-4
+					+pricing-box({
+						title: 'Team ticket + workshops',
+						price: '125',
+						list: [
+							{ iconClass: 'int-check-circle-filled', title: 'Conference Ticket' },
+							{ iconClass: 'int-check-circle-filled', title: 'Free Lunch And Coffee' },
+							{ iconClass: 'int-check-circle-filled', title: 'Certificate' },
+							{ iconClass: 'int-check-circle-filled', title: 'Free Contacts' }
+						]
+					})

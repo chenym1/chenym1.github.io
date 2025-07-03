@@ -1,0 +1,68 @@
+-
+	var
+		logo = {
+			default: 'logo-default-202x46.png',
+			inverse: 'logo-inverse-202x46.png',
+			name: 'OpenWeb'
+		},
+
+		menu = {
+			type: 'root',
+			child: [
+				{
+					title: 'Home',
+					link: 'index.html',
+					home: true
+				},
+
+				{
+					title: 'About Us',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Speakers' },
+							{ title: 'Speaker Page' }
+						]
+					}
+				},
+
+				{
+					title: 'Gallery'
+				},
+
+				{
+					title: 'Blog',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Single post' }
+						]
+					}
+				},
+
+				{
+					title: 'Pages',
+					link: '#',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Schedule' },
+							{ title: 'Tickets' },
+							{ title: 'Privacy policy' }
+						]
+					}
+				},
+
+				{
+					title: 'Contact us'
+				}
+			]
+		},
+
+		homePage,
+		pageName,
+		pageId,
+		pageClass,
+		pageImage,
+		htmlClass,
+		breadcrumbs = [];

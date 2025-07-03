@@ -1,0 +1,56 @@
+include ../person/_person
+
+// Speakers
+section.section.section-xl.bg-transparent.novi-background( data-preset!={ title:'Speakers', category:'person', reload:false, id:'speakers' } )
+	.container.text-center.text-sm-left
+		h1 This year's speakers
+		.row.row-40.row-lg-50.row-xl-70.row-xxl-80.row-offset-md
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'person-01-400x400',
+					title:    'Mark Rogers',
+					subtitle: 'CEO, “iStep”',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.15s' } )
+				+person({
+					img:      'person-02-400x400',
+					title:    'Edward Rivera',
+					subtitle: 'CTO & Co-founder, “RTM Ltd.”',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.3s' } )
+				+person({
+					img:      'person-03-400x400',
+					title:    'John Wilson',
+					subtitle: 'Lead JS developer, “XT Devs”',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+person({
+					img:      'person-04-400x400',
+					title:    'Daniel Reed',
+					subtitle: 'UX designer, “Q-Era”',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp', delay: '0.15s' } )
+				+person({
+					img:      'person-05-400x400',
+					title:    'Jean Hall',
+					subtitle: 'Web designer, “Aurum Co.”',
+					links:    [
+						{ iconClass: 'int-twitter' }
+					]
+				}).person-gray.person-md

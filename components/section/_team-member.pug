@@ -1,0 +1,80 @@
+include ../progress-linear/_progress-liear
+
+// Team member
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Team Member', category:'person', reload:true, id:'team-member' } )
+	.container
+		.row.row-40.novi-background
+			.col-xs-10.col-md-5
+				+img( 'person-01-510x510' )
+				a.btn.btn-block.btn-lg.btn-rect.btn-dark( href='#' ) Get in Touch
+				.offset-md
+					.d-inline-flex.align-items-center
+						span.icon.icon-xs.int-phone.novi-icon.mr-2
+						.h5: a( href='tel:#' ) +1 234 567 8901
+				ul.list.list-xs.small
+					li.list-item Monday-Friday: 8am - 6pm
+					li.list-item Saturday-Sunday: 8am - 2pm
+					li.list-item Holidays: closed
+				.offset-xs
+					a.font-weight-normal( href='mailto:#' ) mrogers@demolink.org
+				.offset-sm
+					.group-30.d-inline-flex.text-900
+						a.icon.icon-sm.icon-social.int-youtube.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-facebook.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-instagram.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-twitter.novi-icon( href='#' )
+						a.icon.icon-sm.icon-social.int-linkedin.novi-icon( href='#' )
+
+			.col-md-7
+				.row.row-30.row-md-40.row-xl-60
+					.col-12
+						h2 Hello,
+							br
+							| I’m Mark Rogers.
+							br
+							| I’m the CEO of iStep Ltd and one of the regular speakers at OpenWeb.
+					.col-12
+						h5 A few words about me
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, ornare nisi pretium gravida in. Et ipsum lectus felis, urna mauris maecenas purus. Commodo massa turpis volutpat enim etiam commodo congue. Natoque gravida sagittis augue non lectus donec. Pellentesque dignissim ut et duis.
+					.col-12
+						h5 My professional experience
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat leo ut metus malesuada sit neque. Consequat cursus mi ut velit laoreet in. Iaculis ut arcu nibh facilisis bibendum pharetra consequat.
+					.col-12.progress-linear-area
+						+progress-linear({
+							title: 'Responsive Design',
+							value: '75',
+							hideValue: true
+						}).progress-linear-lg
+						+progress-linear({
+							title: 'Logo Design',
+							value: '99',
+							hideValue: true
+						}).progress-linear-lg
+						+progress-linear({
+							title: 'Mobile App UI Design',
+							value: '45',
+							hideValue: true
+						}).progress-linear-lg
+					.col-12
+						h5 Awards:
+						.row.row-20.gutters-20.row-text
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2019
+									.award-text.small Best Project Management
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2018
+									.award-text.small Product Manager of the Year
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2016
+									.award-text.small Best Mobile Design Award
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2014
+									.award-text.small Responsiveness Award
+							.col-6.col-sm-4.col-md-6.col-lg-4
+								article.award
+									.award-title.h3 2013
+									.award-text.small Trendsetter of the Year Award

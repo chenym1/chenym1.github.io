@@ -1,0 +1,28 @@
+include ../counter/_counter
+
+// Facts & statistics
+section.section.section-lg.bg-900.context-dark.novi-background( data-preset!={ title:'Facts & Statistics', category:'infographics', reload:true, id:'facts-statistics' } )
+	.container.text-center.text-md-left
+		h1 Facts & statistics
+		.row.row-30
+			.col-6.col-xs-3
+				+counter({
+					value: 3000,
+					postfix: '+',
+					title: 'Participants'
+				})
+			.col-6.col-xs-3
+				+counter({
+					value: 12,
+					title: 'Speakers'
+				})
+			.col-6.col-xs-3
+				+counter({
+					value: 8,
+					title: 'Countries'
+				})
+			.col-6.col-xs-3
+				+counter({
+					value: 7,
+					title: 'Workshops'
+				})

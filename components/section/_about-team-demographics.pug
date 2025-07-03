@@ -1,0 +1,30 @@
+include ../counter/_counter
+
+// Team demographics
+section.section.section-md.bg-transparent.novi-background( data-preset!={ title:'Team Demographics', category:'content box', reload:true, id:'team-demographics' } )
+	.container
+		.row.row-30.justify-content-center.justify-content-lg-between.novi-disabled
+			.col-xs-10.col-sm-12.col-md-4
+				h1 Visitor demographics
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis dignissim lectus viverra curabitur. Hac suspendisse diam.
+			.col-xs-10.col-sm-12.col-md-8.col-lg-7
+				div
+					.row
+						.col-6.col-xs-5.col-md-6.col-xl-5
+							+counter({
+								value: 57,
+								postfix: '%',
+								title: 'Men'
+							})
+						.col-6.col-xs-5.col-md-6.col-xl-5
+							+counter({
+								value: 43,
+								postfix: '%',
+								title: 'Women'
+							})
+				hr.divider.divider-sm
+				p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida nunc sit congue morbi sit neque ut quis. Sed odio tempor, vulputate sodales. Odio vitae augue habitant est faucibus velit vulputate.
+				.offset-sm.group-30.d-flex.align-items-center.flex-wrap.flex-xs-nowrap
+					h3 Are you interested in becoming an event sponsor?
+					.flex-shrink-0
+						a.btn.btn-lg.btn-rect.btn-dark( href='contact-us.html' ) Become a Sponsor
